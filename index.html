@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="name"></div>
+        <div class="display">
+            <div id="main-display">
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="main_button">
+                <div class="black btn" id="off">
+                    <div class="text" onclick="off()">OFF</div>
+                </div>
+                <div class="black btn" id="mrc">
+                    <div class="text">MRC</div>
+                </div>
+                <div class="black btn" id="m-">
+                    <div class="text">M-</div>
+                </div>
+                <div class="black btn" id="m+">
+                    <div class="text">M+</div>
+                </div>
+                <div class="black btn" id="/" onclick="add('/')" value="/">
+                    <div class="text">÷</div>
+                </div>
+                <div class="black btn" id="%" onclick="add('%') " value="%">
+                    <div class="text">%</div>
+                </div>
+                <div class="grey btn" id="7" onclick="add('7')" value="7">
+                    <div class="text">7</div>
+                </div>
+                <div class="grey btn" id="8" onclick="add('8')" value="8">
+                    <div class="text">8</div>
+                </div>
+                <div class="grey btn" id="9" onclick="add('9')" value="9">
+                    <div class="text">9</div>
+                </div>
+                <div class="black btn" id="*" onclick="add('*')" value="*">
+                    <div class="text">*</div>
+                </div>
+                <div class="black btn" id="root" onclick="root()" value="^0.5">
+                    <div class="text">√ ̅</div>
+                </div>
+                <div class="grey btn" id="4" onclick="add('4')" value="4">
+                    <div class="text">4</div>
+                </div>
+                <div class="grey btn" id="5" onclick="add('5')" value="5">
+                    <div class="text">5</div>
+                </div>
+                <div class="grey btn" id="6" onclick="add('6')" value="6">
+                    <div class="text">6</div>
+                </div>
+                <div class="black btn" id="-" onclick="add('-')" value="-">
+                    <div class="text">-</div>
+                </div>
+                <div class="pink btn" id="c">
+                    <div class="text" onclick="c()">C</div>
+                </div>
+                <div class="grey btn" id="1" onclick="add('1')" value="1">
+                    <div class="text">1</div>
+                </div>
+                <div class="grey btn" id="2" onclick="add('2')" value="2">
+                    <div class="text">2</div>
+                </div>
+                <div class="grey btn" id="3" onclick="add('3')" value="3">
+                    <div class="text">3</div>
+                </div>
+                <div class="black btn" id="plus" onclick="add('+')" value="+">
+                    <div class="text" id=p>+</div>
+                </div>
+                <div class="pink btn" id="ac" onclick="console.log('You have clicked AC') ">
+                    <div class="text" onclick="ac()">AC</div>
+                </div>
+                <div class="grey btn" id="0" onclick="add('0')" value="0">
+                    <div class="text">0</div>
+                </div>
+                <div class="grey btn" id="." onclick="add('.')" value=".">
+                    <div class="text">.</div>
+                </div>
+                <div class="black btn" id="=" onclick="equal()" value="">
+                    <div class="text">=</div>
+                </div>
+
+                <!-- <td><input type="button" class="btn black" id= "off" onclick="off()" value=""></td>
+                <td><input type="button" class="btn black" id= "mrc" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "m-" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "m+" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "/" onclick="add('/')" value=""></td>
+                <td><input type="button" class="btn black" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn" id= "" onclick="add()" value=""></td>
+                <td><input type="button" class="btn black" id= "" onclick="add()" value=""></td> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="myscripts.js"></script>
+
+</script>
+
+</html>
