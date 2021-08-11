@@ -1,3 +1,3 @@
 # Calculator
 Real-time calculator made using html , CSS , JavaScript.
-![Demo](https://user-images.githubusercontent.com/84263946/129062888-dca410cd-5fdd-4b8f-bcd5-147506995d1d.gif)
+![Demo](https://user-images.githubusercontent.com/84263946/129074462-3c732861-c2d6-494f-a6e9-819e2c703431.gif)
